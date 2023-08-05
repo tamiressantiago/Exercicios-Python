@@ -25,11 +25,11 @@ media = soma/pessoas
 mulheres = []
 acima_media = []
 for i in range (pessoas):
-    if usuarios[i- 1]['sexo'] == 'F':
-        mulheres.append(usuarios[i- 1]['nome'])
+    if usuarios[i]['sexo'] == 'F':
+        mulheres.append(usuarios[i]['nome'])
     
-    if usuarios[i- 1]['idade'] > media:
-        acima_media.append(usuarios[i- 1]['nome'])
+    if usuarios[i]['idade'] > media:
+        acima_media.append(usuarios[i]['nome'])
 
 
 

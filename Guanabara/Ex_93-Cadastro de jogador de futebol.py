@@ -3,18 +3,16 @@ def verificar_digitos(valor):
         valor = input('Caractere inválido. Digite novamente: ')
     return int(valor)
 
-cadastro = { 'jogador': input('Nome do jogador: '),
-}
-
+cadastro = { 'jogador': input('Nome do jogador: ')}
 cadastro['partidas'] = verificar_digitos((input('Quantas partidas ' + cadastro['jogador'] + ' jogou?: ')))
 
 gols = []
 for partida in range (1, cadastro['partidas'] + 1):
     gol = input(f"Quantos gols na partida {partida}?: ")
     gols.append(verificar_digitos(gol))
-
 cadastro['gols'] = gols
 cadastro['total'] = sum(gols)
+
 print(cadastro)
 
 print('=-' * 30)
@@ -31,5 +29,3 @@ if cadastro['total'] > 1:
     print(f"Foi um total de {cadastro['total']} gols.")
 else:
     print(f"Foi um total de {cadastro['total']} gol.")
-
-
