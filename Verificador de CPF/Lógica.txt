@@ -1,0 +1,16 @@
+A validação do número de CPF (Cadastro de Pessoas Físicas) é feita através de um algoritmo específico chamado "Módulo 11". 
+
+A lógica da validação do CPF pode ser resumida nos seguintes passos:
+
+1- Remove-se os pontos e o hífen do número do CPF, mantendo apenas os 11 dígitos originais.
+
+2- Cálculo do primeiro dígito verificador:
+    - Pegue os 9 primeiros dígitos do CPF e multiplique cada um pelo seu respectivo peso, de 10 a 2 (o primeiro dígito do CPF tem peso 10, o segundo peso 9 e assim por diante).
+    - Some os resultados das multiplicações.
+    - O primeiro dígito verificador é resultado do cálculo: 11 menos o resto da divisão da soma por 11. Se o resultado for 10 ou 11, o dígito verificador é definido como 0.
+
+3- Cálculo do segundo dígito verificador:
+    - Repete-se o mesmo processo do passo 2, mas agora considere os 10 primeiros dígitos do CPF, incluindo o primeiro dígito verificador encontrado no passo anterior.
+
+4- Verificação dos dígitos verificadores:   
+    Com os dois dígitos verificadores encontrados, compare-os com os dois últimos dígitos do CPF original. Se ambos forem iguais, o CPF é válido; caso contrário, o CPF é inválido.
